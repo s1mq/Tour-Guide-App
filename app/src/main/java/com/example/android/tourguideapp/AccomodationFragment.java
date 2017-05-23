@@ -27,19 +27,27 @@ public class AccomodationFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list, container, false);
 
+        // Create a list of Attractions
         ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction("Fra Mare Thalasso SPA","Ranna tee 2, Haapsalu | (+372) 472 4600", R.drawable.framare ));
-        attractions.add(new Attraction("Sunset Dream Apartment","Suur-Liiva tänav 15, Haapsalu | (+372) 604 2204", R.drawable.sunset ));
-        attractions.add(new Attraction("Baltic Hotel Promenaadi","Sadama tänav 22, Haapsalu | (+372) 473 7250", R.drawable.promenaadi_hotell ));
-        attractions.add(new Attraction("Marienholm Villa","Väike-Viigi tänav 10, Haapsalu | (+372) 563 91671", R.drawable.villa_marienholm ));
-        attractions.add(new Attraction("Hotel Päeva Villa","Lai tänav 7, Haapsalu | (+372) 534 88222", R.drawable.hotell_p2eva_villa ));
-        attractions.add(new Attraction("Reta's House Accommodation","Posti tänav 25, Haapsalu | (+372) 566 87802", R.drawable.reta_majutus ));
-        attractions.add(new Attraction("Supeluse Guesthouse", "Supeluse tänav 4, Haapsalu | (+372) 564 66880", R.drawable.supeluse_guesthouse ));
+        attractions.add(new Attraction(getString(R.string.fra_mare_spa), getString(R.string.fra_mare_spa_address), R.drawable.framare));
+        attractions.add(new Attraction(getString(R.string.sunset_dream), getString(R.string.sunset_dream_address), R.drawable.sunset));
+        attractions.add(new Attraction(getString(R.string.baltic_hotel), getString(R.string.baltic_hotel_address), R.drawable.promenaadi_hotell));
+        attractions.add(new Attraction(getString(R.string.marienholm), getString(R.string.marienholm_address), R.drawable.villa_marienholm));
+        attractions.add(new Attraction(getString(R.string.hotel_day_villa), getString(R.string.hotel_day_vill_address), R.drawable.hotell_p2va_villa));
+        attractions.add(new Attraction(getString(R.string.reta_house), getString(R.string.reta_house_address), R.drawable.reta_majutus));
+        attractions.add(new Attraction(getString(R.string.supeluse), getString(R.string.supeluse_address), R.drawable.supeluse_guesthouse));
 
+        // Create an AttractionAdapter, whose data source is a list of Attractions. The
+        // adapter knows how to create list items for each item in the list.
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
 
+        // Find the ListView object in the view hierarchy of the Activity.
+        // There should be a ListView with the view ID called list, which is declared in the
+        // list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
+        // Make the ListView use the AttractionAdapter we created above, so that the
+        // ListView will display list items for each Attraction in the list.
         listView.setAdapter(adapter);
 
         return rootView;

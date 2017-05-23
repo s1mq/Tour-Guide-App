@@ -27,20 +27,28 @@ public class FoodFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list, container, false);
 
+        // Create a list of Attractions
         ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction("Kreeka restoran Margot Food & Style","Posti tänav 37, Haapsalu 90502 | (+372) 473 5003", R.drawable.margot ));
-        attractions.add(new Attraction("Fra Mare restoran \"Bergfeldt\"","Ranna tee 2, Haapsalu 90403 | (+372) 472 4605", R.drawable.bergfeldt ));
-        attractions.add(new Attraction("Kohvik Hapsal Dietrich","Karja tänav 10, Haapsalu 90503 | (+372) 509 4549", R.drawable.dietrich ));
-        attractions.add(new Attraction("Kärme Küülik","Karja tänav 5, Haapsalu 90502 | (+372) 510 5396", R.drawable.k__lik ));
-        attractions.add(new Attraction("Müüriääre Pagar","Karja tänav 7, Haapsalu 90502 | (+372) 506 0924", R.drawable.m__ri__re ));
-        attractions.add(new Attraction("Pizza Grande","Karja tn 6, Haapsalu 90503 | (+372) 473 7200", R.drawable.pizza_grande ));
-        attractions.add(new Attraction("Taksi Pubi","Posti tänav 29, Haapsalu 90502 | (+372) 504 7428", R.drawable.taksi_pubi ));
-        attractions.add(new Attraction("Talumehe kõrts","Karja tn 2, Haapsalu 90503 | (+372) 530 62755", R.drawable.talumehe ));
+        attractions.add(new Attraction(getString(R.string.margot), getString(R.string.margot_address), R.drawable.margot));
+        attractions.add(new Attraction(getString(R.string.fra_mare_restaurant), getString(R.string.fra_mare_address), R.drawable.bergfeldt));
+        attractions.add(new Attraction(getString(R.string.dietrich), getString(R.string.dietrich_address), R.drawable.dietrich));
+        attractions.add(new Attraction(getString(R.string.fast_rabbitt), getString(R.string.fast_rabbit_address), R.drawable.k__lik));
+        attractions.add(new Attraction(getString(R.string.bakery), getString(R.string.bakery_address), R.drawable.m__ri__re));
+        attractions.add(new Attraction(getString(R.string.grande), getString(R.string.grande_address), R.drawable.pizza_grande));
+        attractions.add(new Attraction(getString(R.string.taksi_pub), getString(R.string.taksi_pub_address), R.drawable.taksi_pubi));
+        attractions.add(new Attraction(getString(R.string.talumehe), getString(R.string.talumehe_address), R.drawable.talumehe));
 
+        // Create an AttractionAdapter, whose data source is a list of Attractions. The
+        // adapter knows how to create list items for each item in the list.
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
 
+        // Find the ListView object in the view hierarchy of the Activity.
+        // There should be a ListView with the view ID called list, which is declared in the
+        // list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
+        // Make the ListView use the AttractionAdapter we created above, so that the
+        // ListView will display list items for each Attraction in the list.
         listView.setAdapter(adapter);
 
         return rootView;

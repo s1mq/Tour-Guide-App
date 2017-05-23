@@ -6,12 +6,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 /**
- * Created by tsare on 23.05.2017.
+ * CustomPagerAdapter is a FragmentPagerAdapter that can provide the layout for each list item based
+ * on a data source which is a list of Attraction objects.
  */
 
 public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    /** Context of the app */
+    /**
+     * Context of the app
+     */
     private Context mContext;
 
     /**
@@ -20,7 +23,7 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
      * @param fm is the fragment manager that will keep each fragment's state in the adapter
      *           across swipes.
      */
-    public CustomFragmentPagerAdapter(Context context, FragmentManager fm){
+    public CustomFragmentPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -29,12 +32,12 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
      * Return the {@link Fragment} that should be displayed for the given page number.
      */
     public Fragment getItem(int position) {
-        if (position == 0){
+        if (position == 0) {
             return new SightsFragment();
         } else if (position == 1) {
             return new EventFragment();
         } else if (position == 2) {
-            return  new FoodFragment();
+            return new FoodFragment();
         } else {
             return new AccomodationFragment();
         }
@@ -49,7 +52,7 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public CharSequence getPageTitle(int position){
+    public CharSequence getPageTitle(int position) {
         if (position == 0) {
             return mContext.getString(R.string.category_sights);
         } else if (position == 1) {

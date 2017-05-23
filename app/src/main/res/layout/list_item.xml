@@ -1,44 +1,41 @@
+<!-- Custom list item for custom adapter -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@android:drawable/dialog_holo_light_frame">
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:orientation="vertical">
 
     <ImageView
+        android:contentDescription="@string/attractionimage"
         android:id="@+id/attraction_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/margot" />
+        tools:src="@drawable/margot" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/attraction_name"
+            style="@style/AttractionName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Margot Food And Style"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingStart="16dp"
-            android:paddingTop="16dp"/>
+            tools:text="Margot Food And Style" />
 
         <TextView
-            android:paddingTop="8dp"
-            android:paddingStart="16dp"
-            android:paddingBottom="16dp"
             android:id="@+id/attraction_address"
+            style="@style/AttractionInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posti tänav 37, Haapsalu 90502 | (+372) 473 5003" />
+            tools:text="Posti tänav 37, Haapsalu 90502 | (+372) 473 5003" />
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

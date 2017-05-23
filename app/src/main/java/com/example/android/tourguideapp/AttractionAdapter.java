@@ -13,7 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by tsare on 23.05.2017.
+ * AttractionAdapter is an ArrayAdapter that can provide the layout for each list item based on
+ * a data source, which is a list of Attraction objects.
  */
 
 public class AttractionAdapter extends ArrayAdapter<Attraction> {
@@ -23,10 +24,10 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
      * The context is used to inflate the layout file, and the list is the data we want
      * to populate into the lists.
      *
-     * @param context       The current context. Used to inflate the layout file.
-     * @param attractions         A List of Word objects to display in a list
+     * @param context     The current context. Used to inflate the layout file.
+     * @param attractions A List of Word objects to display in a list
      */
-    public AttractionAdapter(Activity context, ArrayList<Attraction> attractions){
+    public AttractionAdapter(Activity context, ArrayList<Attraction> attractions) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
@@ -37,10 +38,10 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
     /**
      * Provides a view for an AdapterView (ListView, GridView, etc.)
      *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
+     * @param position    The position in the list of data that should be displayed in the
+     *                    list item view.
      * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
+     * @param parent      The parent ViewGroup that is used for inflation.
      * @return The View for the position in the AdapterView.
      */
     @NonNull
@@ -53,23 +54,36 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
         }
 
+        // Get the Attraction object located at this position in the list
         Attraction currentAttraction = getItem(position);
 
+        // Find the TextView in the list_item.xml layout with the ID attraction_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.attraction_name);
+        // Get the Attraction name from the current Attraction and
+        // set this text on the Attraction name TextView
         nameTextView.setText(currentAttraction.getAttractionName());
 
+        // Find the TextView in the list_item.xml layout with the ID attraction_name
         TextView addressTextView = (TextView) listItemView.findViewById(R.id.attraction_address);
-        addressTextView.setText(currentAttraction.getAttractionAddress());
+        // Get the Attraction info from the current Attraction and
+        // set this text on the Attraction info TextView
+        addressTextView.setText(currentAttraction.getAttractionInfo());
 
+        // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.attraction_image);
-        if (currentAttraction.hasImage()){
+        // Check if an image is provided for this word or not
+        if (currentAttraction.hasImage()) {
+            // If an image is available, display the provided image based on the resource ID
             imageView.setImageResource(currentAttraction.getImageResourceId());
+            // Make sure the view is visible
             imageView.setVisibility(View.VISIBLE);
         } else {
+            // Otherwise hide the ImageView (set visibility to GONE)
             imageView.setVisibility(View.GONE);
         }
 
-
+        // Return the whole list item layout (containing 2 TextViews and an ImageView)
+        // so that it can be shown in the ListView
         return listItemView;
     }
 }

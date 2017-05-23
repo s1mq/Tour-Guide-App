@@ -1,44 +1,81 @@
 package com.example.android.tourguideapp;
 
 /**
- * Created by tsare on 23.05.2017.
+ * Attraction represents a sight, a place or an event in my hometown Haapsalu
+ * It contains its name, info and an image if applicable.
  */
 
 public class Attraction {
 
+    /**
+     * Attraction name
+     */
     private String mAttractionName;
 
+    /**
+     * Attraction info
+     */
     private String mAttractionInfo;
 
+    /**
+     * Attraction image resource ID
+     */
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
+    /**
+     * Constant value that represents no image was provided for this word
+     */
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Attraction(String attractionName, String attractionInfo){
+    /**
+     * Create a new Attraction object
+     *
+     * @param attractionName is the name of the Attraction
+     * @param attractionInfo is the extra information for the Attraction
+     */
+    public Attraction(String attractionName, String attractionInfo) {
         mAttractionName = attractionName;
         mAttractionInfo = attractionInfo;
     }
 
 
-
-    public Attraction(String attractionName, String attractionInfo, int imageResourceId){
+    /**
+     * Create a new Attraction object
+     *
+     * @param attractionName  is the name of the Attraction
+     * @param attractionInfo  is the extra information for the Attraction
+     * @param imageResourceId is the resource ID for the image file associated with this Attraction.
+     */
+    public Attraction(String attractionName, String attractionInfo, int imageResourceId) {
         mAttractionName = attractionName;
         mAttractionInfo = attractionInfo;
         mImageResourceId = imageResourceId;
     }
 
+    /**
+     * Get the Attraction name
+     */
     public String getAttractionName() {
         return mAttractionName;
     }
 
-    public String getAttractionAddress() {
+    /**
+     * Get the Attraction info
+     */
+    public String getAttractionInfo() {
         return mAttractionInfo;
     }
 
+    /**
+     * Get the image resource ID of the attraction
+     */
     public int getImageResourceId() {
         return mImageResourceId;
     }
 
+    /**
+     * Returns whether or not there is an image for this word.
+     */
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
