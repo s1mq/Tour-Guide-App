@@ -8,15 +8,22 @@ public class Attraction {
 
     private String mAttractionName;
 
-    private String mAttractionAddress;
+    private String mAttractionInfo;
 
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Attraction(String attractionName, String attractionAddress, int imageResourceId){
+    public Attraction(String attractionName, String attractionInfo){
         mAttractionName = attractionName;
-        mAttractionAddress = attractionAddress;
+        mAttractionInfo = attractionInfo;
+    }
+
+
+
+    public Attraction(String attractionName, String attractionInfo, int imageResourceId){
+        mAttractionName = attractionName;
+        mAttractionInfo = attractionInfo;
         mImageResourceId = imageResourceId;
     }
 
@@ -25,7 +32,7 @@ public class Attraction {
     }
 
     public String getAttractionAddress() {
-        return mAttractionAddress;
+        return mAttractionInfo;
     }
 
     public int getImageResourceId() {

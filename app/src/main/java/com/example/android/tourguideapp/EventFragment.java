@@ -28,14 +28,30 @@ public class EventFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list, container, false);
 
         ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction("Fra Mare restoran \"Bergfeldt\"","Ranna tee 2, Haapsalu 90403 | (+372) 472 4605", R.drawable.bergfeldt ));
-        attractions.add(new Attraction("Kohvik Hapsal Dietrich","Karja tänav 10, Haapsalu 90503 | (+372) 509 4549", R.drawable.dietrich ));
-        attractions.add(new Attraction("Kärme Küülik","Karja tänav 5, Haapsalu 90502 | (+372) 510 5396", R.drawable.k__lik ));
-        attractions.add(new Attraction("Kreeka restoran Margot Food & Style","Posti tänav 37, Haapsalu 90502 | (+372) 473 5003", R.drawable.margot ));
-        attractions.add(new Attraction("Müüriääre Pagar","Karja tänav 7, Haapsalu 90502 | (+372) 506 0924", R.drawable.m__ri__re ));
-        attractions.add(new Attraction("Pizza Grande","Karja tn 6, Haapsalu 90503 | (+372) 473 7200", R.drawable.pizza_grande ));
-        attractions.add(new Attraction("Taksi Pubi","Posti tänav 29, Haapsalu 90502 | (+372) 504 7428", R.drawable.taksi_pubi ));
-        attractions.add(new Attraction("Talumehe kõrts","Karja tn 2, Haapsalu 90503 | (+372) 530 62755", R.drawable.talumehe ));
+        attractions.add(new Attraction("Muuseumiöö", "20.05"));
+        attractions.add(new Attraction("Haapsalu Kuursaali hooaja avapidu", "20.05"));
+        attractions.add(new Attraction("Graafilise disaini festival", "27.05 - 25.06"));
+        attractions.add(new Attraction("Muinasjutukonverents", "1.06"));
+        attractions.add(new Attraction("Itaalia veinipäevad", "2.06 - 3.06"));
+        attractions.add(new Attraction("Al Bano Carrisi kontsert", "3.06"));
+        attractions.add(new Attraction("Eesti lipu päev", "4.06"));
+        attractions.add(new Attraction("Nargenfestival Kreegi päevad", "10.06 - 11.06"));
+        attractions.add(new Attraction("Öökontsert Vaiko Eplik ja ELIIT", "15.06"));
+        attractions.add(new Attraction("Haapsalu Jaanituli", "23.06 - 24.06"));
+        attractions.add(new Attraction("Tšaikovski Haapsalu", "28.06 - 1.07"));
+        attractions.add(new Attraction("Haapsalu vanamuusika festival", "5.07 - 9.07"));
+        attractions.add(new Attraction("Suvelavastus \"Saabastega kass\"", "5.07 - 23-07"));
+        attractions.add(new Attraction("Muhu Väina Regatt", "7.07"));
+        attractions.add(new Attraction("American Beauty Car Show", "14.07 - 16.07"));
+        attractions.add(new Attraction("Joogafestival", "21.07 - 23.07"));
+        attractions.add(new Attraction("Rock in Haapsalu", "28.07 - 29.07"));
+        attractions.add(new Attraction("Augustibluus", "4.08 - 6.08"));
+        attractions.add(new Attraction("Valge Daami Aeg", "11.08 - 13.08"));
+        attractions.add(new Attraction("Akordioni ja lõõtspillifestival \"Rannalõõts\"", "12.08"));
+        attractions.add(new Attraction("Haapsalu pitsipäev", "13.08"));
+        attractions.add(new Attraction("Maitsete promenaad", "19.08"));
+        attractions.add(new Attraction("Belinda Carlisle and Shanon", "19.08"));
+        attractions.add(new Attraction("Nostalgiapäevad", "8.09 - 10.09"));
 
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
 
