@@ -28,14 +28,13 @@ public class AccomodationFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list, container, false);
 
         ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction("Fra Mare restoran \"Bergfeldt\"","Ranna tee 2, Haapsalu 90403 | (+372) 472 4605", R.drawable.bergfeldt ));
-        attractions.add(new Attraction("Kohvik Hapsal Dietrich","Karja tänav 10, Haapsalu 90503 | (+372) 509 4549", R.drawable.dietrich ));
-        attractions.add(new Attraction("Kärme Küülik","Karja tänav 5, Haapsalu 90502 | (+372) 510 5396", R.drawable.k__lik ));
-        attractions.add(new Attraction("Kreeka restoran Margot Food & Style","Posti tänav 37, Haapsalu 90502 | (+372) 473 5003", R.drawable.margot ));
-        attractions.add(new Attraction("Müüriääre Pagar","Karja tänav 7, Haapsalu 90502 | (+372) 506 0924", R.drawable.m__ri__re ));
-        attractions.add(new Attraction("Pizza Grande","Karja tn 6, Haapsalu 90503 | (+372) 473 7200", R.drawable.pizza_grande ));
-        attractions.add(new Attraction("Taksi Pubi","Posti tänav 29, Haapsalu 90502 | (+372) 504 7428", R.drawable.taksi_pubi ));
-        attractions.add(new Attraction("Talumehe kõrts","Karja tn 2, Haapsalu 90503 | (+372) 530 62755", R.drawable.talumehe ));
+        attractions.add(new Attraction("Fra Mare Thalasso SPA","Ranna tee 2, Haapsalu | (+372) 472 4600", R.drawable.framare ));
+        attractions.add(new Attraction("Sunset Dream Apartment","Suur-Liiva tänav 15, Haapsalu | (+372) 604 2204", R.drawable.sunset ));
+        attractions.add(new Attraction("Baltic Hotel Promenaadi","Sadama tänav 22, Haapsalu | (+372) 473 7250", R.drawable.promenaadi_hotell ));
+        attractions.add(new Attraction("Marienholm Villa","Väike-Viigi tänav 10, Haapsalu | (+372) 563 91671", R.drawable.villa_marienholm ));
+        attractions.add(new Attraction("Hotel Päeva Villa","Lai tänav 7, Haapsalu | (+372) 534 88222", R.drawable.hotell_p2eva_villa ));
+        attractions.add(new Attraction("Reta's House Accommodation","Posti tänav 25, Haapsalu | (+372) 566 87802", R.drawable.reta_majutus ));
+        attractions.add(new Attraction("Supeluse Guesthouse", "Supeluse tänav 4, Haapsalu | (+372) 564 66880", R.drawable.supeluse_guesthouse ));
 
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
 
