@@ -13,6 +13,11 @@ public class Attraction {
     private String mAttractionName;
 
     /**
+     * Attraction address
+     */
+    private String mMapsAddress;
+
+    /**
      * Attraction info
      */
     private String mAttractionInfo;
@@ -53,6 +58,22 @@ public class Attraction {
     }
 
     /**
+     * Create a new Attraction object
+     *
+     * @param attractionName  is the name of the Attraction
+     * @param attractionInfo  is the extra information for the Attraction
+     * @param imageResourceId is the resource ID for the image file associated with this Attraction
+     * @param mapsAddress     is the location information for the Attraction
+     */
+
+    public Attraction(String attractionName, String attractionInfo, int imageResourceId, String mapsAddress) {
+        mAttractionName = attractionName;
+        mAttractionInfo = attractionInfo;
+        mImageResourceId = imageResourceId;
+        mMapsAddress = mapsAddress;
+    }
+
+    /**
      * Get the Attraction name
      */
     public String getAttractionName() {
@@ -67,6 +88,13 @@ public class Attraction {
     }
 
     /**
+     * Get the Attraction address
+     */
+    public String getMapsAddress() {
+        return mMapsAddress;
+    }
+
+    /**
      * Get the image resource ID of the attraction
      */
     public int getImageResourceId() {
@@ -78,5 +106,15 @@ public class Attraction {
      */
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+    /**
+     * Returns whether or not there is an address for this word.
+     */
+    public boolean hasLocation() {
+        if (getMapsAddress() == null) {
+            return false;
+        }
+        return true;
     }
 }

@@ -24,19 +24,23 @@
     <style name="AttractionName">
         <item name="android:textSize">@dimen/attraction_name_size</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:paddingStart">@dimen/list_item_padding</item>
-        <item name="android:paddingLeft">@dimen/list_item_padding</item>
-        <item name="android:paddingTop">@dimen/list_item_padding</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <!-- Style for Attraction's name TextView -->
+    <!-- Style for Attraction's info TextView -->
     <style name="AttractionInfo">
-        <item name="android:paddingStart">@dimen/list_item_padding</item>
-        <item name="android:paddingLeft">@dimen/list_item_padding</item>
-        <item name="android:paddingBottom">@dimen/list_item_padding</item>
         <item name="android:paddingTop">@dimen/list_item_padding_two</item>
         <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Style for Attraction's address TextView -->
+    <style name="AttractionAddress">
+        <item name="android:paddingTop">@dimen/list_item_padding_two</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:drawableStart">@drawable/location_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/list_item_padding</item>
+
     </style>
 
 </resources>
