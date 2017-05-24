@@ -7,10 +7,10 @@
     android:orientation="vertical">
 
     <ImageView
-        android:contentDescription="@string/attractionimage"
         android:id="@+id/attraction_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:contentDescription="@string/attractionimage"
         android:scaleType="centerCrop"
         tools:src="@drawable/margot" />
 

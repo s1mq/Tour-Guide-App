@@ -179,5 +179,15 @@
     <string name="supeluse">Supeluse Guesthouse</string>
     <string name="supeluse_address">Supeluse tänav 4, Haapsalu | (+372) 564 66880</string>
     <string name="attractionimage">AttractionImage</string>
+    <string name="episcopal_castle_maps">Lossiplats tn 3, Haapsalu</string>
+    <string name="tchaikovsky_maps">P. Tshaikovski puiestee, Haapsalu</string>
+    <string name="magdaleena_maps">Rüütli tn 2, Haapsalu</string>
+    <string name="railway_maps">Raudtee tänav 2, Haapsalu</string>
+    <string name="ungru_maps">Ungru Loss, Kiltsi küla, Ridala vald, Lääne maakond</string>
+    <string name="sun_dial_maps">Promenaadi tn, Haapsalu</string>
+    <string name="epp_maria_maps">Kalda tänav 2, Haapsalu</string>
+    <string name="old_town_maps">Karja tn, Haapsalu</string>
+    <string name="bird_maps">Promenaadi tn 3, Haapsalu 90502</string>
+    <string name="promenade_maps">Promenaadi tänav, Haapsalu</string>
 
 </resources>

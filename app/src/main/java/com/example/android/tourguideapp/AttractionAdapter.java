@@ -64,8 +64,6 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         final Attraction currentAttraction = getItem(position);
 
 
-
-
         // Find the TextView in the list_item.xml layout with the ID attraction_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.attraction_name);
         // Get the Attraction name from the current Attraction and
@@ -82,7 +80,7 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         TextView mapsTextView = (TextView) listItemView.findViewById(R.id.attraction_address);
 
         // Check if a location is provided
-        if (currentAttraction.hasLocation()){
+        if (currentAttraction.hasLocation()) {
             // If a location is provided, display the location text
             mapsTextView.setText(currentAttraction.getMapsAddress());
             // Make sure the View is visible
